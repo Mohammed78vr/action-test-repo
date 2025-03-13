@@ -32,9 +32,12 @@ jobs:
       run: |
         echo "Listing all files after build:"
         ls -R
-
+  
     - name: Upload Build Artifact
       uses: actions/upload-artifact@v4
       with:
         name: build-artifact
         path: dist/
+      
+    - name: Print Current Directory
+      run: echo "Current Directory ${pwd}"
